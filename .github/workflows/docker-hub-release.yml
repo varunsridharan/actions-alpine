@@ -39,8 +39,8 @@ jobs:
           fi
           echo " "
 
-      #- name: "⚡ Docker QEMU"
-      #  uses: docker/setup-qemu-action@master
+      - name: "⚡ Docker QEMU"
+        uses: docker/setup-qemu-action@master
 
       - name: "⚡ Docker BuildX"
         uses: docker/setup-buildx-action@master
