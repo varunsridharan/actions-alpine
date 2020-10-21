@@ -1,5 +1,5 @@
 # 🐳 Docker - Alpine
-Customized Version of Alpine OS With Github Actions Toolkit Buitin 
+Customized Version of Alpine OS With Github Actions Toolkit Built-in 
 
 <!--
 ## ✅  Requirements
