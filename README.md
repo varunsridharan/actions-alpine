@@ -1,13 +1,7 @@
-# Git Template
-Custom Github Template
+# 🐳 Docker - Alpine
+Customized Version of Alpine OS With Github Actions Toolkit Buitin 
 
-[![Latest Stable Version][latest-stable-version-img]][lsvl]
-[![Latest Unstable Version][latest-Unstable-version-img]][luvl]
-[![Total Downloads][total-downloads-img]][tdl]
-[![WP][wpcs-img]][wpcsl]
-[![License][license-img]][licenselink]
-[![composer.lock available][composerlock-img]][composerlocklink]
-
+<!--
 ## ✅  Requirements
 
 ## ⚙️Installation
@@ -30,15 +24,21 @@ Or **install it manually**:
 [Download VSP_Framework.zip][downloadzip]:
 
     $ wget https://github.com/varunsridharan/vsp-framework/archive/master.zip
-
+-->
 ## 🚀 Usage
 
-```php
-<?php
+```dockerfile
+FROM varunsridharan/actions-alpine:latest
 
-// Some Code Here
+###########################
+## Write Your Code Below ##
+###########################
 
-?>
+COPY entrypoint.sh /entrypoint.sh
+
+RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
 ```
 ---
 
