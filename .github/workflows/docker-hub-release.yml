@@ -5,6 +5,7 @@ env:
   VS_WORKFLOW_TYPE: "docker-release"
 
 on:
+  workflow_dispatch:
   push:
     branches: 
       - main
