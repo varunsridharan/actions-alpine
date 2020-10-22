@@ -6,7 +6,7 @@ LABEL org.opencontainers.image.source = "https://github.com/varunsridharan/actio
       org.opencontainers.image.authors="Varun Sridharan <varunsridharan23@gmail.com>" \
       org.opencontainers.image.url="https://github.com/varunsridharan/actions-alpine" \
       org.opencontainers.image.documentation="https://github.com/varunsridharan/actions-alpine" \
-      org.opencontainers.image.vendor="Varun Sridharan" \
+      org.opencontainers.image.vendor="Varun Sridharan"
 
 ADD https://raw.githubusercontent.com/varunsridharan/actions-toolkit/main/setup-alpine.sh /
 
