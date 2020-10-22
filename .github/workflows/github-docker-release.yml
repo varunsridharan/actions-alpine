@@ -5,8 +5,9 @@ env:
   VS_WORKFLOW_TYPE: "github-docker-release"
 
 on:
+  workflow_dispatch:
   push:
-    branches: 
+    branches:
       - main
   release:
     types:
@@ -39,8 +40,8 @@ jobs:
           fi
           echo " "
 
-      #- name: "⚡ Docker QEMU"
-      #  uses: docker/setup-qemu-action@master
+      - name: "⚡ Docker QEMU"
+        uses: docker/setup-qemu-action@master
 
       - name: "⚡ Docker BuildX"
         uses: docker/setup-buildx-action@master
