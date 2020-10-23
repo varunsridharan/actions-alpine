@@ -61,7 +61,7 @@ jobs:
       #      ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ env.DOCKER_IMAGE_SLUG }}:latest
       #      ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ env.DOCKER_IMAGE_SLUG }}:${{ env.RELEASE_VERSION }}
 
-      - name: "🎉  Build &  🚀  Publish To Docker Hub"
+      - name: "🎉  Build &  🚀  Publish To Github Container Registry"
         uses: whoan/docker-build-with-cache-action@v5
         with:
           registry: ghcr.io
