@@ -68,7 +68,8 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GH_REPO }}
           image_name: ${{ env.DOCKER_IMAGE_SLUG }}
-          image_tag: latest,${{ env.RELEASE_VERSION }}
+          push_image_and_stages: false
+          image_tag: latest,${{ env.RELEASE_VERSION }}.${{ env.SHA_SHORT }}
 
       - name: "⚡  Repository - After Hook"
         run: |
