@@ -60,7 +60,7 @@ jobs:
           tags: |
             ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ env.DOCKER_IMAGE_SLUG }}:latest
             ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ env.DOCKER_IMAGE_SLUG }}:${{ env.RELEASE_VERSION }}
-            ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ env.DOCKER_IMAGE_SLUG }}::${{ env.SHA_SHORT }}
+            ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ env.DOCKER_IMAGE_SLUG }}:${{ env.SHA_SHORT }}
 
       - name: "⚡  Repository - After Hook"
         run: |
