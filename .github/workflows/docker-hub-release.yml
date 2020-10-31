@@ -7,7 +7,7 @@ env:
 on:
   workflow_dispatch:
   push:
-    branches:
+    branches: 
       - main
   release:
     types:
@@ -46,7 +46,7 @@ jobs:
       - name: "⚡ Docker BuildX"
         uses: docker/setup-buildx-action@master
 
-      - name: "🔒  Log into Docker Hub Registry"
+      - name: "🔒  Log into GitHub Container Registry"
         uses: docker/login-action@master
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
@@ -57,9 +57,8 @@ jobs:
         with:
           push: true
           tags: |
-            ${{ secrets.DOCKER_HUB_USERNAME }}/${{ env.DOCKER_IMAGE_SLUG }}:${{ env.RELEASE_VERSION }}
-            ${{ secrets.DOCKER_HUB_USERNAME }}/${{ env.DOCKER_IMAGE_SLUG }}:${{ env.SHA_SHORT }}
             ${{ secrets.DOCKER_HUB_USERNAME }}/${{ env.DOCKER_IMAGE_SLUG }}:latest
+            ${{ secrets.DOCKER_HUB_USERNAME }}/${{ env.DOCKER_IMAGE_SLUG }}:${{ env.RELEASE_VERSION }}
 
       - name: "⚡  Repository - After Hook"
         run: |
